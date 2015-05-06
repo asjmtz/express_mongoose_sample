@@ -24,3 +24,6 @@ mongod --dbpath yourpath/express_mongoose_sample/data
 ```
 npm start
 ```
+
+demo runs at [http://localhost:3000/](http://localhost:3000/)
+
