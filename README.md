@@ -12,7 +12,7 @@ npm install
 ### run
 
 
-** connect mongodb **
+**connect mongodb**
 
 ```
 cd yourpath/express_mongoose_sample
@@ -20,7 +20,7 @@ mkdir data
 mongod --dbpath yourpath/express_mongoose_sample/data
 ```
 
-** app start **
+**app start**
 ```
 npm start
 ```
