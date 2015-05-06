@@ -15,6 +15,8 @@ npm install
 ** connect mongodb **
 
 ```
+cd yourpath/express_mongoose_sample
+mkdir data
 mongod --dbpath yourpath/express_mongoose_sample/data
 ```
 
