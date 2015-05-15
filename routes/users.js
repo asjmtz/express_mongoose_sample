@@ -6,7 +6,7 @@ var router = express.Router();
 
 // var model = require('./model/team');
 
-var model = require('../model/team');
+var model = require('../model/users');
 
 var User = model.User;
 
@@ -46,7 +46,7 @@ router.route('/')
 			if (err) { 
 				resJson = {
 					meta: {
-						code: 404,
+						code: 10000,
 						msg:''
 					},
 					data:{}
