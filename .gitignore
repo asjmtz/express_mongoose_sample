@@ -1,3 +1,4 @@
 node_modules
 npm*
 data
+*.log

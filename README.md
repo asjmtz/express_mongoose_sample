@@ -25,5 +25,10 @@ mongod --dbpath yourpath/express_mongoose_sample/data
 npm start
 ```
 
+** forever **
+```
+forever -p . -w start ./bin/www
+```
+
 demo runs at [http://localhost:3000/](http://localhost:3000/)
 

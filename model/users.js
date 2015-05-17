@@ -10,8 +10,9 @@ var crypto = require('crypto');
 var hash = function(password) {
   return crypto.createHash('sha1').update(password).digest('base64')
 }
-
-var userSchema = new mongoose.Schema({
+var Schema = mongoose.Schema;
+var userSchema = new Schema({
+	id: { type: Schema.Types.ObjectId },
 	username: String,
 	email: String,
 	// if want to Encrypt password, 
@@ -24,19 +25,13 @@ var User = mongoose.model('User', userSchema);
 
 
 exports.create = function (obj, callback) {
-
+	if( obj && obj.password ){
+		obj.password = hash(obj.password);
+	}
 	// res.json( req.body );
 	var user = new User(obj);
 
-	user.save(function (err, user) {
-		callback(err, { 
-			data: user ,
-			meta: {
-				code: 200,
-				msg: ''
-			}
-		});		
-	});
+	user.save(callback);
 }
 
 /**
@@ -58,4 +53,4 @@ exports.all = function (callback) {
 
 
 
-exports.User = User;
+// exports.User = User;
